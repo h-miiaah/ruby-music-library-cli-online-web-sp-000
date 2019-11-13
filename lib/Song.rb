@@ -67,6 +67,6 @@ class Song
   end
 
   def import
-
+    files.each{|file| file.create_from_filename(file)}
   end
 end
