@@ -66,7 +66,4 @@ class Song
     new_from_filename(filename).tap{|song| song.save}
   end
 
-  def import
-    files.each {|file| Song.create_from_filename(file)}
-  end
 end
