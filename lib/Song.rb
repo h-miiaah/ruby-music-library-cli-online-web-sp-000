@@ -61,4 +61,8 @@ class Song
     artist = Artist.find_or_create_by_name(artist)
     new(name, artist, genre)
   end
+
+  def self.create_from_filename(filename)
+    new_from_filename(filename).tap{|song| song.save}
+  end
 end
